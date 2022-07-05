@@ -5,13 +5,12 @@
 </div>
 
 <div class="row">
+  <% @courses.each do |course| %>
   <div class="col s6 m6">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
-        <span class="card-title">CS111: Intro to Computer Science</span>
-        <p>A thorough intro to Computer Science. No matter what your coding goals are, the best place to start is by building a strong foundation.
-          this Path will teach you how to think and code like a professional. You’ll learn Computer Science fundamentals,
-          build a professional portfolio, and prepare for an entry-level role in tech.</p>
+        <span class="card-title"><%= course.short_name %>: <%= course.name %></span>
+        <p><%= course.description %></p>
       </div>
       <div class="card-action">
         <a href="#">Enroll</a>
@@ -19,19 +18,6 @@
       </div>
     </div>
   </div>
-  <div class="col s6 m6">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text">
-        <span class="card-title">CS112: Intro to Computer Science 2</span>
-        <p>An intermediate look at Computer Science. This course is designed to be far more than a traditional introduction to
-          programming - it is a rigorous, engaging, and approachable course that explores many of the big,
-          foundational ideas of computing so that all students understand how these concepts are transforming the world we live in</p>
-      </div>
-      <div class="card-action">
-        <a href="#">Enroll</a>
-        <a href="#">Info</a>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>
 
