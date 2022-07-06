@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'courses/new', to: 'courses#new'
   # go to /about and send that to pages controller which will point to about view
   get 'about', to: 'pages#about'
-  #  ~~~  using resources give you all routes  ~~~
+  #  ~~~  using resources gives you all routes  ~~~
   #  students GET   /students(.:format)               students#index
   #  POST  /students(.:format)                        students#create
   #  new_student GET   /students/new(.:format)        students#new
