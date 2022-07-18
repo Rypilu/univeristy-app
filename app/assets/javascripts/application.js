@@ -23,3 +23,12 @@ $( document ).on('turbolinks:load', function() {
     $('#fade-out-target').fadeOut(4000)
 })
 
+document.addEventListener('turbolinks:load', function() {
+    elem = document.querySelector('#slide-out');
+    instance = new M.Sidenav(elem, {});
+});
+document.addEventListener('turbolinks:before-visit', function() {
+    elem = document.querySelector('#slide-out');
+    instance = M.Sidenav.getInstance(elem);
+    instance.destroy();
+});
